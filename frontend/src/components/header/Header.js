@@ -1,5 +1,6 @@
 import './Header.css'
 import {Link, NavLink} from "react-router-dom";
+import logo from './logo.png'
 
 function Header() {
   const exitHundler = () =>{
@@ -8,7 +9,7 @@ function Header() {
   }
   return (
     <nav>
-        <p><NavLink to='/'><img src='%PUBLIC_URL%/logo.png' alt='logo'/></NavLink></p>
+        <p><NavLink to='/'><img src={logo} alt='logo'/></NavLink></p>
         <p><NavLink to='/rates'>Курсы валют</NavLink></p>
         <p><NavLink to='/countries'>Страны</NavLink></p>
         <p onClick={exitHundler}>Выход</p>
