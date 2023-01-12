@@ -9,7 +9,7 @@ urlpatterns = [
     path('api/', include('parser.urls')),
     path('api/', include('djoser.urls.jwt')),
     path('openapi-schema/', get_schema_view(
-        swagger='2.0',
+        info={'swagger':'2.0'},
         title="Covid info",
         description="statistics of information for 2020 according to coronavirus cases and currency exchange rate "
                     "changes",
