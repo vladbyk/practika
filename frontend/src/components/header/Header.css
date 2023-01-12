@@ -2,18 +2,21 @@ nav{
     display: flex;
     justify-content: flex-end;
 }
-nav p {
+nav div{
+    display: flex;
+}
+nav div p {
     padding: 5px 10px 5px 10px;
     margin: 30px;
     cursor: pointer;
 }
-nav p:hover{
+nav div p:hover{
     background-color: #00698a;
     border-radius: 12px;
 }
-nav p a{
+nav div p a{
     text-decoration: none;
 }
-nav p a:visited{
+nav div p a:visited{
     color: black;
 }
