@@ -8,7 +8,7 @@ function Header() {
   }
   return (
     <nav>
-        <p><NavLink to='/'><img src='./logo.png' alt='logo'/></NavLink></p>
+        <p><NavLink to='/'><img src='%PUBLIC_URL%/logo.png' alt='logo'/></NavLink></p>
         <p><NavLink to='/rates'>Курсы валют</NavLink></p>
         <p><NavLink to='/countries'>Страны</NavLink></p>
         <p onClick={exitHundler}>Выход</p>
