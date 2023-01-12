@@ -12,7 +12,7 @@ urlpatterns = [
         title="Covid info",
         description="statistics of information for 2020 according to coronavirus cases and currency exchange rate "
                     "changes",
-        version="3.0.0",
+        version="1.0.0",
         public=True,
     ), name='openapi-schema'),
     path('docs/', TemplateView.as_view(
