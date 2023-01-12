@@ -14,7 +14,6 @@ urlpatterns = [
                     "changes",
         version="1.0.0",
         public=True,
-        default_version='v1'
     ), name='openapi-schema'),
     path('docs/', TemplateView.as_view(
         template_name='swagger-ui.html',
