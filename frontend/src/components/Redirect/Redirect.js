@@ -1,5 +1,5 @@
 function Redirect(){
-    window.location.href(window.location.host+'/login/')
+    window.location.replace(window.location.host+'/login/');
     return(
         <>
         </>
