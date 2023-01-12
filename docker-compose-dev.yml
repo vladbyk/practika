@@ -7,7 +7,7 @@ services:
             context: .
             dockerfile: ./docker/nginx/Dockerfile
         ports:
-            - "86:86"
+            - "80:80"
         volumes:
             - static_volume:/app/backend/django_static
             - ./docker/nginx/development:/etc/nginx/conf.d
