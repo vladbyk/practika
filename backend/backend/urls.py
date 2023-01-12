@@ -9,11 +9,10 @@ urlpatterns = [
     path('api/', include('parser.urls')),
     path('api/', include('djoser.urls.jwt')),
     path('openapi-schema/', get_schema_view(
-        openapi='3.0.0',
         title="Covid info",
         description="statistics of information for 2020 according to coronavirus cases and currency exchange rate "
                     "changes",
-        version="1.0.0",
+        version="3.0.0",
         public=True,
     ), name='openapi-schema'),
     path('docs/', TemplateView.as_view(
