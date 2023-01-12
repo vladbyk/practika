@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "http://45.141.79.129:86/api/"
+export const BASE_URL = "http://127.0.0.0:80/api/"
 export const send_request = axios.create();
 
 send_request.interceptors.request.use(
