@@ -4,12 +4,17 @@ nav {
 
 }
 
+.logo{
+    margin: 2px;
+    padding: 2px;
+}
 nav div p a img {
-    width: 50px;
+    width: 75px;
 }
 
 nav div {
     display: flex;
+    align-items: center
 }
 
 nav div p {

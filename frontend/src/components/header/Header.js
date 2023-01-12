@@ -10,7 +10,7 @@ function Header() {
     return (
         <nav>
             <div>
-                <p><NavLink to='/'><img src={logo} alt='logo'/></NavLink></p>
+                <p className='logo'><NavLink to='/'><img src={logo} alt='logo'/></NavLink></p>
             </div>
             <div>
                 <p><NavLink to='/rates'>Курсы валют</NavLink></p>
