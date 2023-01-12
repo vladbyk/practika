@@ -9,6 +9,7 @@ import Main from "./pages/main/Main";
 import Rates from "./pages/rates/Rates";
 import RatesDetail from "./pages/rates/RatesDetail";
 import CountriesDetail from "./pages/countries/CountriesDetail";
+import Redirect from "./components/Redirect/Redirect";
 
 export default function Routing() {
     let isLoggedIn = !!sessionStorage.getItem('access');
@@ -23,6 +24,7 @@ export default function Routing() {
                 {isLoggedIn && <Route path='/countries/:name' element={<CountriesDetail/>}/>}
                 {isLoggedIn && <Route path='/rates' element={<Rates/>}/>}
                 {isLoggedIn && <Route path='/rates/:name' element={<RatesDetail/>}/>}
+                <Route path='*' element={<Redirect/>}/>
             </Routes>
         </BrowserRouter>
     )
