@@ -41,7 +41,7 @@ send_request.interceptors.response.use(
         })
         .catch((err) => {
           sessionStorage.clear()
-          window.location.href(window.location.host+'/login/')
+          window.location.replace(window.location.origin+'/login/');
         });
     }
     return Promise.reject(error);
