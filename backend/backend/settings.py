@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'parser',
     'accounts',
     'django_db_logger',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -91,13 +92,13 @@ DB_POSTGRESQL = "postgresql"
 
 DATABASES_ALL = {
     DB_POSTGRESQL: {
-            "ENGINE": "django.db.backends.postgresql",
-            "HOST": os.environ.get("POSTGRES_HOST", "localhost"),
-            "NAME": os.environ.get("POSTGRES_NAME", "postgres"),
-            "USER": os.environ.get("POSTGRES_USER", "postgres"),
-            "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "postgres"),
-            "PORT": int(os.environ.get("POSTGRES_PORT", "5432")),
-        },
+        "ENGINE": "django.db.backends.postgresql",
+        "HOST": os.environ.get("POSTGRES_HOST", "localhost"),
+        "NAME": os.environ.get("POSTGRES_NAME", "postgres"),
+        "USER": os.environ.get("POSTGRES_USER", "postgres"),
+        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "postgres"),
+        "PORT": int(os.environ.get("POSTGRES_PORT", "5432")),
+    },
 }
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 100000
@@ -161,7 +162,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 # Simple JWT
@@ -170,6 +172,14 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=5),
     'ROTATE_REFRESH_TOKENS': True,
+}
+
+# Openapi
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'practika_test',
+    'DESCRIPTION': 'charts of exchange rates and covid diseases for 2020',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }
 
 # Djoser
@@ -190,7 +200,6 @@ EMAIL_HOST_USER = 'practika.test2@gmail.com'
 EMAIL_HOST_PASSWORD = 'tbpeahpmsozmqjjs'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
 
 # logging
 
